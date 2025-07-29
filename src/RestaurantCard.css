@@ -1,40 +1,50 @@
 .card {
-  width: 350px;
-  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  font-family: sans-serif;
-  transition: transform 0.2s ease-in-out
+  padding: 16px;
+  max-width: 600px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.card:hover {
-  transform: scale(1.03);
+.card-photos {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.card-photos::-webkit-scrollbar {
+  height: 8px;
+}
+
+.card-photos::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
 }
 
 .card-image {
-  width: 100%;
-  height: 200px;
+  height: 180px;
+  border-radius: 10px;
+  flex-shrink: 0;
   object-fit: cover;
+  aspect-ratio: 4 / 3;
 }
 
 .card-info {
-  padding: 20px;
+  padding: 0 4px;
 }
 
 .card-name {
+  font-size: 1.5em;
   margin: 0;
-  font-size: 24px;
-  color: #333;
 }
 
-.card-cuisine {
-  margin: 8px 0 0;
-  color: #666;
-}
-
+.card-cuisine,
 .card-price {
-  margin: 4px 0 0;
-  font-weight: bold;
-  color: #333;
+  font-size: 1em;
+  margin: 4px 0;
 }
